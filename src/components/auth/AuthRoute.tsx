@@ -9,14 +9,13 @@ interface IAuthRoute {
 }
 
 function AuthRoute(props: IAuthRoute) {
-  const { component: Component, access, render = null, ...rest } = props
-  console.log(props, "AuthRoute")
+  const { component: Component, access, ...rest } = props
   return (
     <Route
       {...rest}
       render={(props) => {
         if (access) {
-          return render ? render(props) : <Component {...props} />
+          return <Component {...props} />
         }
         return <Route component={() => <Fragment>403</Fragment>} />
       }}

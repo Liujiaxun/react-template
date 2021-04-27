@@ -1,11 +1,15 @@
-import React from "react"
 import { AuthRoute } from "../../../components/auth"
 import Dashboard from "./dashboard"
 
 import RoutePath from "src/router"
 
-const R = () => {
-  return [<AuthRoute key={RoutePath.INDEX} component={Dashboard} access={1} />]
-}
+const R = () => [
+  <AuthRoute
+    key={RoutePath.INDEX}
+    component={Dashboard}
+    access={1}
+    path={RoutePath.INDEX}
+  />,
+]
 
 export default R

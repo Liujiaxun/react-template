@@ -2,7 +2,7 @@ import React from "react"
 import RoutePath from "src/router"
 import { AuthRoute } from "../../../components/auth"
 
-const r = () => {
+const R = () => {
   return [
     <AuthRoute
       key={RoutePath.PRODUCT}
@@ -13,4 +13,4 @@ const r = () => {
   ]
 }
 
-export default r
+export default R

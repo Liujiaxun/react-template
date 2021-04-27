@@ -2,18 +2,18 @@ import React, { useEffect } from "react"
 import { Redirect, Route, Switch } from "react-router-dom"
 
 import RoutePath from "src/router"
-import { AuthRoute } from "src/components/auth"
 
 import dashboard from "src/pages/main/dashboard"
 import product from "src/pages/main/product"
 
+import ErrorPage from "src/components/errorpage"
+
 import styles from "./index.module.scss"
-import { useIsLogin } from "../../hooks"
+import { useIsLogin } from "src/hooks"
 
 function Entrance(props: {}) {
   useEffect(() => {}, [])
   const isLogin = useIsLogin()
-  console.log(props)
   return (
     <div className={styles.main}>
       <Switch>
@@ -24,7 +24,7 @@ function Entrance(props: {}) {
         />
         {dashboard()}
         {product()}
-        <Route path="*" component={() => <>4045</>} />
+        <Route path="*" component={() => <ErrorPage />} />
       </Switch>
     </div>
   )
