@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react"
 
-function useIsLogin() {
+export function useIsLogin() {
   const [isLogin, setIsLogin] = useState<boolean>(false)
   useEffect(() => {
     if (window.localStorage.getItem("AdminToken")) {
@@ -9,5 +9,3 @@ function useIsLogin() {
   }, [])
   return isLogin
 }
-
-export default useIsLogin

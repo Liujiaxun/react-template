@@ -10,6 +10,7 @@ interface IAuthRoute {
 
 function AuthRoute(props: IAuthRoute) {
   const { component: Component, access, render = null, ...rest } = props
+  console.log(props, "AuthRoute")
   return (
     <Route
       {...rest}

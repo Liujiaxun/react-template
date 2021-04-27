@@ -1,5 +1,6 @@
-const Menu = {
+const RoutePath = {
   LOGIN: "/admin/login",
-  INDEX: "/admin/Main",
+  INDEX: "/admin/main/dashboard",
+  PRODUCT: "/admin/main/product/list",
 }
-export default Menu
+export default RoutePath
